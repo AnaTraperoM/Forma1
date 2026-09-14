@@ -206,6 +206,69 @@
     .board-credit { margin-top: 10px; font-size: 11px; color: var(--ink-3); }
     .board-desc { margin-top: 14px; font-size: 14px; color: var(--ink-2); min-height: 42px; }
 
+
+    /* Testimonials */
+    .testis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 860px) { .testis { grid-template-columns: 1fr; } }
+    .testi { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; display: flex; flex-direction: column; gap: 18px; }
+    .testi blockquote { margin: 0; font-family: var(--serif); font-size: 20px; line-height: 1.35; font-variation-settings: "SOFT" 60, "opsz" 36; }
+    .testi .who { display: flex; align-items: center; gap: 12px; margin-top: auto; font-size: 13px; color: var(--ink-2); }
+    .testi .who i { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; font-style: normal; font-weight: 600; font-size: 13px; color: var(--paper); }
+    .testi .who b { display: block; font-weight: 600; color: var(--ink); }
+
+    /* Works with */
+    .tools { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 36px; }
+    @media (max-width: 900px) { .tools { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 520px) { .tools { grid-template-columns: repeat(2, 1fr); } }
+    .tool { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 18px 16px; text-align: center; }
+    .tool .mark { width: 40px; height: 40px; border-radius: 12px; margin: 0 auto 10px; display: grid; place-items: center; font-family: var(--serif); font-size: 18px; color: var(--paper); }
+    .tool b { display: block; font-weight: 600; font-size: 14px; }
+    .tool span { font-size: 12px; color: var(--ink-3); }
+    .formats { margin-top: 20px; font-size: 13px; color: var(--ink-3); display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .formats code { background: var(--cream-2); padding: 3px 8px; border-radius: 6px; font-size: 12px; color: var(--ink-2); }
+
+    /* Pricing */
+    .pricing-head { text-align: center; max-width: 640px; margin: 0 auto 36px; }
+    .pricing-head p { margin-top: 14px; font-size: 17px; }
+    .toggle { display: inline-flex; align-items: center; gap: 4px; background: var(--cream-2); padding: 4px; border-radius: 999px; margin-top: 26px; }
+    .toggle button { border: 0; background: transparent; padding: 8px 16px; border-radius: 999px; font-size: 14px; color: var(--ink-2); cursor: pointer; font-family: var(--sans); }
+    .toggle button.on { background: var(--paper); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+    .toggle .save { font-size: 11px; color: var(--clay); font-weight: 600; margin-left: 4px; }
+    .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+    @media (max-width: 900px) { .plans { grid-template-columns: 1fr; } }
+    .plan { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 30px 28px; display: flex; flex-direction: column; position: relative; }
+    .plan.popular { border-color: var(--ink); box-shadow: 0 30px 60px -40px rgba(60,40,20,.5); }
+    .plan .badge { position: absolute; top: -13px; left: 28px; background: var(--clay); color: #fff; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
+    .plan h3 { font-size: 26px; }
+    .plan .for { color: var(--ink-2); font-size: 14px; margin-top: 6px; min-height: 42px; }
+    .plan .price { margin-top: 22px; display: flex; align-items: baseline; gap: 6px; }
+    .plan .price .amt { font-family: var(--serif); font-size: 46px; line-height: 1; letter-spacing: -0.02em; }
+    .plan .price .per { color: var(--ink-3); font-size: 14px; }
+    .plan .billed { font-size: 12px; color: var(--ink-3); margin-top: 6px; min-height: 16px; }
+    .plan .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 22px 0; padding: 14px 0; border-top: 1px dashed var(--line); border-bottom: 1px dashed var(--line); }
+    .plan .meta small { display: block; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 3px; }
+    .plan .meta b { font-weight: 600; font-size: 14px; }
+    .plan ul { list-style: none; margin: 0 0 26px; padding: 0; display: grid; gap: 10px; font-size: 14px; color: var(--ink-2); }
+    .plan ul li { display: flex; gap: 10px; align-items: flex-start; }
+    .plan ul li::before { content: ""; flex: none; width: 16px; height: 16px; margin-top: 2px; border-radius: 50%; background: var(--sage); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='black'/%3E%3Cpath d='M4.5 8.2l2.3 2.3 4.7-4.7' stroke='white' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='black'/%3E%3Cpath d='M4.5 8.2l2.3 2.3 4.7-4.7' stroke='white' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat; }
+    .plan .btn { margin-top: auto; justify-content: center; }
+    .pricing-note { text-align: center; font-size: 13px; color: var(--ink-3); margin-top: 22px; }
+
+    /* FAQ */
+    .faq { max-width: 760px; margin: 0 auto; }
+    .faq .section-head { text-align: center; max-width: none; margin-bottom: 36px; }
+    .faq details { border-top: 1px solid var(--line); }
+    .faq details:last-of-type { border-bottom: 1px solid var(--line); }
+    .faq summary { list-style: none; cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--serif); font-size: 20px; font-variation-settings: "SOFT" 50, "opsz" 36; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; font-family: var(--sans); font-size: 22px; color: var(--ink-3); flex: none; width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; transition: transform .2s ease; }
+    .faq details[open] summary::after { transform: rotate(45deg); }
+    .faq details p { padding: 0 44px 22px 0; color: var(--ink-2); font-size: 15px; }
+    .faq-foot { text-align: center; margin-top: 28px; font-size: 14px; color: var(--ink-2); }
+
+    /* closing CTA tweaks */
+    .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+
     /* Quote */
     .quote { text-align: center; max-width: 780px; margin: 0 auto; }
     .quote blockquote { margin: 0; font-family: var(--serif); font-size: clamp(24px, 3vw, 34px); line-height: 1.3; font-variation-settings: "SOFT" 70, "opsz" 72; }
@@ -243,6 +306,8 @@
       <li><a href="#how">How it works</a></li>
       <li><a href="#benefits">Why designers love it</a></li>
       <li><a href="#styles">Styles</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
     </ul>
     <div class="nav-cta">
       <a class="btn btn-ghost" href="#demo" data-cta="nav_see_it_work">See it work</a>
@@ -534,12 +599,162 @@
     </div>
   </section>
 
-  <!-- QUOTE -->
-  <section style="padding-top:0">
-    <figure class="quote wrap reveal">
-      <blockquote>"I used to lose the client's excitement somewhere between the moodboard and the first render. Now I show them a space in the same meeting."</blockquote>
-      <figcaption>Interior designer, residential studio · beta user</figcaption>
-    </figure>
+  <!-- TESTIMONIALS -->
+  <section id="studio" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">From the studio</p>
+        <h2 style="margin-top:12px">Leave the client meeting with a yes, not a to-do list.</h2>
+      </div>
+      <div class="testis">
+        <div class="testi reveal">
+          <blockquote>"I used to lose the client's excitement somewhere between the moodboard and the first render. Now I show them a space in the same meeting."</blockquote>
+          <div class="who"><i style="background:var(--clay)">M</i><span><b>Marta</b>Residential designer · solo practice</span></div>
+        </div>
+        <div class="testi reveal">
+          <blockquote>"Three layout options in the time it used to take me to draw one. Clients pick faster when they can actually see it."</blockquote>
+          <div class="who"><i style="background:var(--sage)">J</i><span><b>Jonas</b>Co-founder · four-person studio</span></div>
+        </div>
+        <div class="testi reveal">
+          <blockquote>"It doesn't replace my eye. It replaces the three days of SketchUp I did before anyone saw my eye."</blockquote>
+          <div class="who"><i style="background:var(--walnut)">P</i><span><b>Priya</b>Interior designer · hospitality projects</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS WITH -->
+  <section id="tools" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Works with what you already use</p>
+        <h2 style="margin-top:12px">Start from your boards. Hand off to your drafter.</h2>
+        <p class="muted">Bring inspiration in from where it lives, and send finished concepts wherever the project goes next — nothing gets stuck inside Forma.</p>
+      </div>
+      <div class="tools reveal">
+        <div class="tool"><div class="mark" style="background:#b8623f">P</div><b>Pinterest</b><span>Import boards as inspiration</span></div>
+        <div class="tool"><div class="mark" style="background:#8a9a84">C</div><b>Canva</b><span>Client presentations</span></div>
+        <div class="tool"><div class="mark" style="background:#6b4a34">S</div><b>SketchUp</b><span>Editable 3D handoff</span></div>
+        <div class="tool"><div class="mark" style="background:#221d19">A</div><b>AutoCAD</b><span>Plans for your drafter</span></div>
+        <div class="tool"><div class="mark" style="background:#5c7f8f">R</div><b>Revit</b><span>When the architect needs it</span></div>
+        <div class="tool"><div class="mark" style="background:#c4a46a">D</div><b>Drive &amp; Dropbox</b><span>Sync photos and plans</span></div>
+      </div>
+      <div class="formats reveal">Exports: <code>.png</code><code>.pdf</code><code>.skp</code><code>.dwg</code><code>.obj</code><code>3D share link</code></div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" style="padding-top:0">
+    <div class="wrap">
+      <div class="pricing-head reveal">
+        <p class="eyebrow">Pricing</p>
+        <h2 style="margin-top:12px">Priced for a designer, not an engineering department.</h2>
+        <p class="muted">Every plan starts with a 14-day trial. Imports and exports are never metered — you pay for projects and AI edits, not for seats that sit idle.</p>
+        <div class="toggle" role="group" aria-label="Billing period">
+          <button class="on" data-period="monthly">Monthly</button>
+          <button data-period="annual">Annual <span class="save">2 months free</span></button>
+        </div>
+      </div>
+
+      <div class="plans">
+        <div class="plan reveal" data-plan="solo">
+          <h3>Solo</h3>
+          <p class="for">For the independent designer running their own projects.</p>
+          <div class="price"><span class="amt" data-monthly="$29" data-annual="$24">$29</span><span class="per">/ month</span></div>
+          <div class="billed" data-monthly="Billed monthly" data-annual="Billed $288 / year">Billed monthly</div>
+          <div class="meta">
+            <div><small>Projects</small><b>5 active</b></div>
+            <div><small>AI edits</small><b>150 / month</b></div>
+          </div>
+          <ul>
+            <li>Floor plan, photo and sketch import</li>
+            <li>Editable layouts and 3D concepts</li>
+            <li>Style and material boards</li>
+            <li>PNG and PDF exports</li>
+            <li>3 client share links per project</li>
+          </ul>
+          <a class="btn btn-ghost" href="#waitlist" data-cta="plan_solo" data-plan-pick="solo">Start free for 14 days</a>
+        </div>
+
+        <div class="plan popular reveal" data-plan="studio">
+          <span class="badge">Most popular</span>
+          <h3>Studio</h3>
+          <p class="for">For small studios presenting to clients every week.</p>
+          <div class="price"><span class="amt" data-monthly="$89" data-annual="$74">$89</span><span class="per">/ month</span></div>
+          <div class="billed" data-monthly="Billed monthly · 3 seats included" data-annual="Billed $888 / year · 3 seats included">Billed monthly · 3 seats included</div>
+          <div class="meta">
+            <div><small>Projects</small><b>Unlimited</b></div>
+            <div><small>AI edits</small><b>1,000 / month</b></div>
+          </div>
+          <ul>
+            <li>Everything in Solo</li>
+            <li>High-fidelity renders and walkthroughs</li>
+            <li>Unlimited client links with comments</li>
+            <li>SketchUp, DWG and OBJ handoff</li>
+            <li>Supplier material libraries</li>
+            <li>Shared studio workspace</li>
+          </ul>
+          <a class="btn btn-primary" href="#waitlist" data-cta="plan_studio" data-plan-pick="studio">Start Studio trial</a>
+        </div>
+
+        <div class="plan reveal" data-plan="agency">
+          <h3>Agency</h3>
+          <p class="for">For firms standardising concept work across many designers.</p>
+          <div class="price"><span class="amt">Custom</span></div>
+          <div class="billed">Annual agreement</div>
+          <div class="meta">
+            <div><small>Projects</small><b>Unlimited</b></div>
+            <div><small>AI edits</small><b>Custom volume</b></div>
+          </div>
+          <ul>
+            <li>Unlimited seats, roles and SSO</li>
+            <li>Brand templates and presentation kits</li>
+            <li>Private material and furniture libraries</li>
+            <li>Priority rendering</li>
+            <li>Dedicated onboarding</li>
+          </ul>
+          <a class="btn btn-ghost" href="#waitlist" data-cta="plan_agency" data-plan-pick="agency">Talk to us</a>
+        </div>
+      </div>
+      <p class="pricing-note reveal">Beta pricing — nothing is charged during the trial. No credit card to start. Cancel anytime.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding-top:0">
+    <div class="wrap faq">
+      <div class="section-head reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2 style="margin-top:12px">Questions designers ask before they try it</h2>
+      </div>
+      <div class="reveal">
+        <details>
+          <summary>Do I need to know CAD or SketchUp?</summary>
+          <p>No. If you can describe a room to a client, you can use Forma. You upload, you describe, you drag things around. The technical drawing happens underneath and you can export it when someone needs it.</p>
+        </details>
+        <details>
+          <summary>Will it look like generic AI, or like my work?</summary>
+          <p>Forma restyles your actual room from your actual references — your Pinterest board, your palette, your furniture picks. It's a fast pair of hands for your direction, not a random image generator.</p>
+        </details>
+        <details>
+          <summary>Can I start from just a photo of the room?</summary>
+          <p>Yes. A phone photo, a floor plan, a listing PDF, or a sketch on paper all work. Forma reads walls, windows and doors and builds an editable space you can measure.</p>
+        </details>
+        <details>
+          <summary>What do I actually get out at the end?</summary>
+          <p>Presentation-ready boards and renders (PNG, PDF), a 3D link your client can walk through on their phone, and on Studio, editable SketchUp/DWG files for your drafter or contractor.</p>
+        </details>
+        <details>
+          <summary>Who owns the designs?</summary>
+          <p>You do. Everything you generate is yours to present, sell and reuse. We never train on your client projects.</p>
+        </details>
+        <details>
+          <summary>Are client photos and plans private?</summary>
+          <p>Projects are private by default and only visible through links you create. You can delete a project and its files at any time.</p>
+        </details>
+      </div>
+      <p class="faq-foot reveal">Still deciding? <a href="#waitlist" data-cta="faq_cta" style="text-decoration:underline">Ask for a 15-minute walkthrough.</a></p>
+    </div>
   </section>
 
   <!-- CTA -->
@@ -548,7 +763,8 @@
       <div class="cta reveal">
         <p class="eyebrow">Early access</p>
         <h2 style="margin-top:12px">Design your next room in Forma.</h2>
-        <p class="muted">We're onboarding a small group of interior designers each week. Tell us where to send your invite.</p>
+        <p class="muted">Bring a floor plan, a photo, or last week's client comments. Leave with a concept you can show — and a file your drafter can open.</p>
+        <p class="muted" id="planNote" style="font-size:14px;color:var(--clay);margin-top:10px" hidden></p>
         <form class="waitlist" id="waitlistForm" novalidate>
           <input type="email" id="email" name="email" placeholder="you@studio.com" autocomplete="email" required>
           <button class="btn btn-primary" type="submit" data-cta="waitlist_submit">Request an invite</button>
@@ -654,6 +870,35 @@
     track('style_selected', { style: b.dataset.style });
   });
 
+
+  // ---------- pricing ----------
+  var period = 'monthly';
+  document.querySelectorAll('.toggle button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      period = b.dataset.period;
+      document.querySelectorAll('.toggle button').forEach(function (x) { x.classList.toggle('on', x === b); });
+      document.querySelectorAll('[data-monthly]').forEach(function (el) { el.textContent = el.dataset[period]; });
+      track('pricing_period_toggled', { period: period });
+    });
+  });
+  var PLAN_NOTE = {
+    solo: 'Solo plan noted — we\'ll open Solo trials first.',
+    studio: 'Studio plan noted — you\'ll be in the first Studio cohort.',
+    agency: 'Agency noted — we\'ll reach out to set up a walkthrough.'
+  };
+  document.querySelectorAll('[data-plan-pick]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var plan = a.dataset.planPick;
+      track('plan_selected', { plan: plan, period: period });
+      try { posthog.register({ plan_interest: plan }); } catch (e) {}
+      var note = document.getElementById('planNote');
+      note.textContent = PLAN_NOTE[plan]; note.hidden = false;
+    });
+  });
+  document.querySelectorAll('.faq details').forEach(function (d) {
+    d.addEventListener('toggle', function () { if (d.open) track('faq_opened', { question: d.querySelector('summary').textContent.trim() }); });
+  });
+
   // ---------- waitlist ----------
   var form = document.getElementById('waitlistForm');
   var emailInput = document.getElementById('email');
@@ -670,7 +915,7 @@
     }
     // Privacy: the email is never stored or sent anywhere. We only record that
     // someone submitted the form (anonymous traffic + click), not who.
-    track('waitlist_submitted', { persona: 'interior_designer', email_provided: true });
+    track('waitlist_submitted', { persona: 'interior_designer', email_provided: true, plan_interest: (posthog.get_property && posthog.get_property('plan_interest')) || null });
     emailInput.value = '';
     emailInput.disabled = true;
     form.querySelector('button').disabled = true;
