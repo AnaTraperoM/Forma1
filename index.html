@@ -920,7 +920,9 @@
     emailInput.disabled = true;
     form.querySelector('button').disabled = true;
     formMsg.style.color = '#8a9a84';
-    formMsg.innerHTML = '<strong>Forma is still in development.</strong> Thanks for your interest — we haven\'t saved your email, but we\'ve noted that you\'d like early access and will announce the beta here first.';
+    formMsg.textContent = 'Thanks! Taking you to your confirmation…';
+    // give the analytics request a moment to leave, then go to the confirmation page
+    setTimeout(function () { window.location.href = 'thank-you.html'; }, 350);
   });
 
   // ---------- reveal on scroll ----------
