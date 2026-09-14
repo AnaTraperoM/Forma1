@@ -554,7 +554,7 @@
           <button class="btn btn-primary" type="submit" data-cta="waitlist_submit">Request an invite</button>
         </form>
         <p class="form-msg" id="formMsg" aria-live="polite"></p>
-        <p class="cta-sub">Free during beta. No credit card. We'll never share your email.</p>
+        <p class="cta-sub">Free during beta. No credit card. We don't store your email yet.</p>
       </div>
     </div>
   </section>
@@ -668,16 +668,14 @@
       track('waitlist_invalid_email');
       return;
     }
-    try {
-      if (window.posthog) {
-        posthog.identify(email, { email: email, persona: 'interior_designer', source: 'forma_landing' });
-        posthog.capture('waitlist_joined', { email: email, persona: 'interior_designer' });
-      }
-    } catch (err) {}
-    form.querySelector('button').disabled = true;
+    // Privacy: the email is never stored or sent anywhere. We only record that
+    // someone submitted the form (anonymous traffic + click), not who.
+    track('waitlist_submitted', { persona: 'interior_designer', email_provided: true });
+    emailInput.value = '';
     emailInput.disabled = true;
+    form.querySelector('button').disabled = true;
     formMsg.style.color = '#8a9a84';
-    formMsg.textContent = "You're on the list. We'll be in touch soon — go find a room worth redesigning.";
+    formMsg.innerHTML = '<strong>Forma is still in development.</strong> Thanks for your interest — we haven\'t saved your email, but we\'ve noted that you\'d like early access and will announce the beta here first.';
   });
 
   // ---------- reveal on scroll ----------
