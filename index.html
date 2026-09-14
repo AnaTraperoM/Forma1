@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forma — Turn an idea into a space in minutes</title>
+  <meta name="description" content="Upload a floor plan, inspiration image, or sketch and instantly create editable layouts and 3D concepts. Forma is the AI design studio for interior designers.">
+  <meta property="og:title" content="Forma — Turn an idea into a space in minutes">
+  <meta property="og:description" content="Upload a floor plan, inspiration image, or sketch and instantly create editable layouts and 3D concepts.">
+  <meta property="og:type" content="website">
+
+  <script>document.documentElement.className += " js";</script>
+
+  <!-- PostHog -->
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="du vu fu pu yu init Bu Hu Nu qu Vu Kl ju Zu Ou Yu Xu th capture getExtension zu hu nh calculateEventProperties ih register register_once register_for_session unregister unregister_for_session ah Lu sh getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync uh identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset hh shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty rh Ku createPersonProfile setInternalOrTestUser oh bu opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Qu debug Yl Os getPageViewId captureTraceFeedback captureTraceMetric Pu".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_BY23i9WY2n7wn4jked5NkDZT2S8yewnipjddfy86FkWX', {
+      api_host: 'https://us.i.posthog.com',
+      defaults: '2026-05-30',
+      person_profiles: 'identified_only',
+    });
+    posthog.register({ landing_variant: 'interior-designer', product: 'forma' });
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..600,0..100&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #f6f1ea;
+      --cream-2: #efe7dc;
+      --paper: #fbf8f3;
+      --ink: #221d19;
+      --ink-2: #5d534b;
+      --ink-3: #8f857b;
+      --line: #e2d8cb;
+      --clay: #b8623f;
+      --clay-2: #d47a53;
+      --sage: #8a9a84;
+      --sand: #d9c5a8;
+      --walnut: #6b4a34;
+      --radius: 18px;
+      --max: 1120px;
+      --serif: "Fraunces", Georgia, "Times New Roman", serif;
+      --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.55;
+    }
+    a { color: inherit; text-decoration: none; }
+    img, svg { max-width: 100%; display: block; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.01em; margin: 0; }
+    h1 { font-size: clamp(44px, 6.2vw, 78px); line-height: 1.02; font-variation-settings: "SOFT" 60, "opsz" 144; }
+    h2 { font-size: clamp(32px, 4vw, 48px); line-height: 1.1; font-variation-settings: "SOFT" 50, "opsz" 96; }
+    h3 { font-size: 22px; line-height: 1.25; }
+    p { margin: 0; }
+    .eyebrow { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay); font-weight: 600; }
+    .muted { color: var(--ink-2); }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 22px; border-radius: 999px; font-weight: 500; font-size: 15px;
+      border: 1px solid transparent; cursor: pointer; font-family: var(--sans);
+      transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--ink); color: var(--paper); }
+    .btn-primary:hover { background: #000; box-shadow: 0 10px 30px -12px rgba(0,0,0,.45); }
+    .btn-ghost { background: transparent; border-color: var(--line); color: var(--ink); }
+    .btn-ghost:hover { background: var(--paper); }
+    .btn-clay { background: var(--clay); color: #fff; }
+    .btn-clay:hover { background: var(--clay-2); }
+
+    /* Nav */
+    header {
+      position: sticky; top: 0; z-index: 20;
+      background: color-mix(in srgb, var(--cream) 85%, transparent);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo { font-family: var(--serif); font-size: 26px; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; }
+    .logo i { width: 22px; height: 22px; border-radius: 6px 6px 6px 2px; background: var(--clay); display: inline-block; position: relative; }
+    .logo i::after { content: ""; position: absolute; inset: 5px 5px 5px 9px; background: var(--cream); border-radius: 2px; }
+    nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; font-size: 14px; color: var(--ink-2); }
+    nav ul a:hover { color: var(--ink); }
+    .nav-cta { display: flex; gap: 10px; align-items: center; }
+    .nav-cta .btn { padding: 10px 18px; font-size: 14px; }
+    @media (max-width: 760px) { nav ul { display: none; } .nav-cta .btn-ghost { display: none; } }
+
+    /* Hero */
+    .hero { padding: 84px 0 40px; }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } .hero { padding-top: 56px; } }
+    .hero .lede { font-size: 19px; color: var(--ink-2); max-width: 520px; margin-top: 22px; line-height: 1.5; }
+    .hero-actions { display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
+    .hero-note { margin-top: 16px; font-size: 13px; color: var(--ink-3); }
+
+    /* Prompt demo box */
+    .prompt {
+      margin-top: 36px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 14px 14px 12px; box-shadow: 0 30px 60px -40px rgba(60,40,20,.35);
+      max-width: 560px;
+    }
+    .prompt-label { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--ink-3); margin-bottom: 8px; }
+    .prompt-label span.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--sage); box-shadow: 0 0 0 3px color-mix(in srgb, var(--sage) 25%, transparent); }
+    .prompt textarea {
+      width: 100%; border: 0; background: transparent; resize: none; font-family: var(--serif); font-size: 21px;
+      line-height: 1.35; color: var(--ink); outline: none; padding: 4px 4px 6px; min-height: 84px;
+      font-variation-settings: "SOFT" 40, "opsz" 24;
+    }
+    .prompt-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; border-top: 1px dashed var(--line); padding-top: 10px; }
+    .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+    .chip {
+      font-size: 12px; padding: 6px 10px; border-radius: 999px; background: var(--cream-2); color: var(--ink-2);
+      border: 1px solid transparent; cursor: pointer; font-family: var(--sans);
+    }
+    .chip:hover { border-color: var(--line); background: var(--cream); }
+
+    /* Hero visual */
+    .visual { position: relative; }
+    .visual .card {
+      background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 18px;
+      box-shadow: 0 40px 80px -50px rgba(60,40,20,.5);
+    }
+    .visual .card-head { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--ink-3); margin-bottom: 12px; }
+    .visual .tabs { display: flex; gap: 4px; background: var(--cream-2); padding: 3px; border-radius: 999px; }
+    .visual .tabs button { border: 0; background: transparent; padding: 5px 12px; border-radius: 999px; font-size: 12px; color: var(--ink-2); cursor: pointer; font-family: var(--sans); }
+    .visual .tabs button.on { background: var(--paper); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+    .scene { position: relative; aspect-ratio: 4/3; border-radius: 14px; overflow: hidden; background: linear-gradient(180deg, #efe7dc 0%, #e6dccd 100%); }
+    .scene svg { position: absolute; inset: 0; width: 100%; height: 100%; transition: opacity .5s ease; }
+    .scene svg.hidden { opacity: 0; pointer-events: none; }
+    .tag {
+      position: absolute; background: var(--ink); color: var(--paper); font-size: 11px; padding: 6px 10px; border-radius: 999px;
+      box-shadow: 0 8px 20px -8px rgba(0,0,0,.5); animation: float 5s ease-in-out infinite;
+    }
+    .tag.t1 { left: 14px; top: 14px; }
+    .tag.t2 { right: 14px; top: 14px; animation-delay: -2s; background: var(--clay); }
+    .tag.t3 { right: 14px; bottom: 14px; animation-delay: -3.5s; background: var(--paper); color: var(--ink); border: 1px solid var(--line); }
+    @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-6px) } }
+
+    /* Logos / trust strip */
+    .strip { padding: 30px 0 10px; text-align: center; font-size: 13px; color: var(--ink-3); }
+    .strip .row { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin-top: 14px; font-family: var(--serif); font-size: 18px; color: var(--ink-2); opacity: .75; }
+
+    /* Steps */
+    section { padding: 96px 0; }
+    .section-head { max-width: 640px; margin-bottom: 48px; }
+    .section-head p { margin-top: 14px; font-size: 17px; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
+    .step { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; position: relative; overflow: hidden; }
+    .step .num { font-family: var(--serif); font-size: 44px; color: var(--sand); line-height: 1; margin-bottom: 18px; }
+    .step h3 { margin-bottom: 8px; }
+    .step p { color: var(--ink-2); font-size: 15px; }
+    .step .art { margin-top: 22px; height: 120px; border-radius: 12px; background: var(--cream-2); display: grid; place-items: center; overflow: hidden; padding: 0 12px; }
+    .step .art svg { width: 100%; max-width: 220px; height: auto; }
+
+    /* Benefits */
+    .benefits-wrap { background: var(--ink); color: var(--paper); border-radius: 32px; padding: 72px 56px; }
+    @media (max-width: 760px) { .benefits-wrap { padding: 48px 26px; border-radius: 24px; } }
+    .benefits-wrap .eyebrow { color: var(--sand); }
+    .benefits-wrap h2 { color: var(--paper); }
+    .benefits { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 44px; }
+    @media (max-width: 760px) { .benefits { grid-template-columns: 1fr; } }
+    .benefit { border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: 24px; background: rgba(255,255,255,.03); }
+    .benefit .ico { width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,.08); display: grid; place-items: center; margin-bottom: 16px; }
+    .benefit h3 { color: var(--paper); font-size: 21px; margin-bottom: 6px; }
+    .benefit p { color: rgba(251,248,243,.7); font-size: 15px; }
+
+    /* Style explorer */
+    .explorer { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: center; }
+    @media (max-width: 900px) { .explorer { grid-template-columns: 1fr; } }
+    .styles { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 24px; }
+    .style-btn {
+      padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper);
+      font-size: 14px; cursor: pointer; font-family: var(--sans); color: var(--ink-2); transition: all .15s;
+    }
+    .style-btn:hover { border-color: var(--ink-3); }
+    .style-btn.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    .board { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 22px; }
+    .board-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
+    .board-top h3 { font-size: 24px; }
+    .board-top span { font-size: 12px; color: var(--ink-3); }
+    .swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+    .swatch { aspect-ratio: 1; border-radius: 12px; transition: background .5s ease; position: relative; border: 1px solid rgba(0,0,0,.05); }
+    .swatch small { position: absolute; left: 8px; bottom: 6px; font-size: 10px; color: rgba(0,0,0,.55); mix-blend-mode: multiply; }
+    .board-room { margin-top: 16px; border-radius: 14px; overflow: hidden; aspect-ratio: 16/10; position: relative; background: var(--cream-2); }
+    .board-room img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      opacity: 0; transform: scale(1.04); transition: opacity .7s ease, transform 1.2s ease;
+    }
+    .board-room img.on { opacity: 1; transform: scale(1); }
+    .board-room .label {
+      position: absolute; left: 12px; bottom: 12px; background: rgba(34,29,25,.78); color: var(--paper);
+      font-size: 11px; padding: 6px 10px; border-radius: 999px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    }
+    .board-credit { margin-top: 10px; font-size: 11px; color: var(--ink-3); }
+    .board-desc { margin-top: 14px; font-size: 14px; color: var(--ink-2); min-height: 42px; }
+
+    /* Quote */
+    .quote { text-align: center; max-width: 780px; margin: 0 auto; }
+    .quote blockquote { margin: 0; font-family: var(--serif); font-size: clamp(24px, 3vw, 34px); line-height: 1.3; font-variation-settings: "SOFT" 70, "opsz" 72; }
+    .quote figcaption { margin-top: 20px; font-size: 14px; color: var(--ink-3); }
+
+    /* CTA */
+    .cta { background: var(--paper); border: 1px solid var(--line); border-radius: 32px; padding: 72px 40px; text-align: center; }
+    .cta p.muted { max-width: 540px; margin: 16px auto 0; font-size: 17px; }
+    form.waitlist { display: flex; gap: 10px; max-width: 480px; margin: 32px auto 0; }
+    form.waitlist input {
+      flex: 1; padding: 14px 18px; border-radius: 999px; border: 1px solid var(--line); background: var(--cream);
+      font-size: 15px; font-family: var(--sans); outline: none; min-width: 0;
+    }
+    form.waitlist input:focus { border-color: var(--ink-3); background: #fff; }
+    @media (max-width: 520px) { form.waitlist { flex-direction: column; } }
+    .form-msg { margin-top: 14px; font-size: 14px; color: var(--sage); min-height: 20px; }
+    .cta-sub { margin-top: 12px; font-size: 13px; color: var(--ink-3); }
+
+    footer { padding: 40px 0 48px; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-3); }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+    footer a:hover { color: var(--ink); }
+
+    /* reveal on scroll */
+    html.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
+    html.js .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .tag { animation: none; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="logo" href="#top" aria-label="Forma home"><i></i>Forma</a>
+    <ul>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#benefits">Why designers love it</a></li>
+      <li><a href="#styles">Styles</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="#demo" data-cta="nav_see_it_work">See it work</a>
+      <a class="btn btn-primary" href="#waitlist" data-cta="nav_early_access">Get early access</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">AI design studio for interior designers</p>
+        <h1 style="margin-top:16px">Turn an idea into a space in&nbsp;minutes.</h1>
+        <p class="lede">Upload a floor plan, inspiration image, or sketch and instantly create editable layouts and 3D concepts.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#waitlist" data-cta="hero_early_access">Get early access</a>
+          <a class="btn btn-ghost" href="#how" data-cta="hero_how_it_works">How it works ↓</a>
+        </div>
+        <p class="hero-note">Free while in beta · No CAD experience needed</p>
+
+        <div class="prompt" id="demo">
+          <div class="prompt-label"><span class="dot"></span> Describe the change in plain words</div>
+          <textarea id="promptText" rows="2" spellcheck="false">Make this living room warm minimal, add seating for six, and keep the existing windows.</textarea>
+          <div class="prompt-row">
+            <div class="chips">
+              <button class="chip" data-prompt="Turn this into a Japandi bedroom with a reading nook by the window.">Japandi bedroom</button>
+              <button class="chip" data-prompt="Open up the kitchen to the dining area and add an island with seating for four.">Open kitchen</button>
+              <button class="chip" data-prompt="Give this studio a calm, earthy palette and hide the storage.">Earthy studio</button>
+            </div>
+            <button class="btn btn-clay" id="generateBtn" style="padding:10px 16px;font-size:14px;white-space:nowrap">Generate ✦</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="visual">
+        <div class="card">
+          <div class="card-head">
+            <span>Living room · 42 m²</span>
+            <div class="tabs" role="tablist">
+              <button class="on" data-view="plan" role="tab">Floor plan</button>
+              <button data-view="3d" role="tab">3D concept</button>
+            </div>
+          </div>
+          <div class="scene">
+            <!-- Floor plan view -->
+            <svg id="viewPlan" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-label="Floor plan sketch">
+              <defs>
+                <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M20 0H0V20" fill="none" stroke="#d9cdbd" stroke-width=".6"/>
+                </pattern>
+              </defs>
+              <rect width="400" height="300" fill="url(#grid)"/>
+              <!-- walls -->
+              <g fill="none" stroke="#3a312b" stroke-width="6" stroke-linejoin="miter">
+                <path d="M60 50H340V250H60Z"/>
+              </g>
+              <!-- windows -->
+              <g stroke="#8a9a84" stroke-width="6">
+                <line x1="130" y1="50" x2="220" y2="50"/>
+                <line x1="340" y1="110" x2="340" y2="190"/>
+              </g>
+              <g stroke="#fff" stroke-width="2"><line x1="130" y1="50" x2="220" y2="50"/><line x1="340" y1="110" x2="340" y2="190"/></g>
+              <!-- door -->
+              <path d="M60 200a40 40 0 0 1 40 40" fill="none" stroke="#3a312b" stroke-width="1.5" stroke-dasharray="3 3"/>
+              <line x1="60" y1="200" x2="60" y2="240" stroke="#efe7dc" stroke-width="7"/>
+              <!-- sofa (L) -->
+              <g fill="#d9c5a8" stroke="#6b4a34" stroke-width="1.5">
+                <rect x="110" y="120" width="120" height="34" rx="6"/>
+                <rect x="110" y="120" width="34" height="90" rx="6"/>
+              </g>
+              <!-- coffee table -->
+              <ellipse cx="200" cy="185" rx="28" ry="16" fill="#efe7dc" stroke="#6b4a34" stroke-width="1.5"/>
+              <!-- armchairs -->
+              <g fill="#d9c5a8" stroke="#6b4a34" stroke-width="1.5">
+                <rect x="260" y="130" width="34" height="34" rx="8"/>
+                <rect x="260" y="185" width="34" height="34" rx="8"/>
+              </g>
+              <!-- rug -->
+              <rect x="150" y="165" width="100" height="60" fill="none" stroke="#b8623f" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <!-- dims -->
+              <g font-family="Inter, sans-serif" font-size="9" fill="#8f857b">
+                <text x="200" y="272" text-anchor="middle">7.0 m</text>
+                <text x="358" y="152" text-anchor="middle" transform="rotate(90 358 152)">6.0 m</text>
+              </g>
+              <!-- seat count -->
+              <g font-family="Inter, sans-serif" font-size="9" fill="#b8623f" font-weight="600">
+                <text x="170" y="112">6 seats ✓</text>
+              </g>
+            </svg>
+
+            <!-- 3D view -->
+            <svg id="view3d" class="hidden" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-label="3D concept render">
+              <defs>
+                <linearGradient id="wallL" x1="0" x2="1"><stop offset="0" stop-color="#e8dccd"/><stop offset="1" stop-color="#f3ece2"/></linearGradient>
+                <linearGradient id="wallR" x1="0" x2="1"><stop offset="0" stop-color="#f6f0e6"/><stop offset="1" stop-color="#e2d5c3"/></linearGradient>
+                <linearGradient id="floorG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9ab86"/><stop offset="1" stop-color="#b08f6a"/></linearGradient>
+                <linearGradient id="light" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff8e8" stop-opacity=".9"/><stop offset="1" stop-color="#fff8e8" stop-opacity="0"/></linearGradient>
+              </defs>
+              <!-- walls -->
+              <polygon points="0,40 200,110 200,300 0,300" fill="url(#wallL)"/>
+              <polygon points="200,110 400,40 400,300 200,300" fill="url(#wallR)"/>
+              <!-- floor -->
+              <polygon points="0,300 200,230 400,300" fill="url(#floorG)"/>
+              <polygon points="0,300 200,230 400,300 400,300 0,300" fill="url(#floorG)"/>
+              <rect x="0" y="230" width="400" height="70" fill="url(#floorG)" clip-path="none" opacity="0"/>
+              <!-- window left with light -->
+              <polygon points="40,75 140,105 140,185 40,175" fill="#dfe8df"/>
+              <polygon points="40,75 140,105 140,185 40,175" fill="none" stroke="#fff" stroke-width="3"/>
+              <line x1="90" y1="90" x2="90" y2="180" stroke="#fff" stroke-width="2"/>
+              <polygon points="40,175 140,185 220,290 60,300" fill="url(#light)"/>
+              <!-- window right -->
+              <polygon points="270,100 350,78 350,170 270,182" fill="#dfe8df"/>
+              <polygon points="270,100 350,78 350,170 270,182" fill="none" stroke="#fff" stroke-width="3"/>
+              <!-- rug -->
+              <polygon points="120,262 230,228 330,262 220,296" fill="#c5806a" opacity=".8"/>
+              <!-- sofa L -->
+              <polygon points="110,232 200,203 240,215 150,246" fill="#e6dccd"/>
+              <polygon points="110,232 150,246 150,268 110,254" fill="#cbbfae"/>
+              <polygon points="150,246 240,215 240,237 150,268" fill="#d8ccbb"/>
+              <polygon points="110,222 200,193 240,205 240,215 200,203 110,232" fill="#efe6d8"/>
+              <!-- sofa back cushions -->
+              <polygon points="115,217 195,192 195,204 115,229" fill="#f4ede2"/>
+              <!-- second sofa -->
+              <polygon points="240,252 320,228 350,240 270,266" fill="#e6dccd"/>
+              <polygon points="270,266 350,240 350,258 270,284" fill="#d8ccbb"/>
+              <polygon points="240,252 270,266 270,284 240,270" fill="#cbbfae"/>
+              <polygon points="240,242 320,218 350,230 350,240 320,228 240,252" fill="#efe6d8"/>
+              <!-- coffee table -->
+              <ellipse cx="215" cy="258" rx="30" ry="12" fill="#6b4a34"/>
+              <ellipse cx="215" cy="254" rx="30" ry="12" fill="#8a6547"/>
+              <!-- plant -->
+              <rect x="356" y="215" width="14" height="22" fill="#a97e5a"/>
+              <circle cx="363" cy="205" r="14" fill="#8a9a84"/>
+              <circle cx="352" cy="198" r="9" fill="#9fae98"/>
+              <circle cx="372" cy="196" r="10" fill="#7d8c77"/>
+              <!-- floor lamp -->
+              <line x1="70" y1="200" x2="70" y2="260" stroke="#3a312b" stroke-width="2"/>
+              <polygon points="55,190 85,190 80,204 60,204" fill="#f4ede2" stroke="#3a312b" stroke-width="1"/>
+              <ellipse cx="70" cy="261" rx="10" ry="3" fill="#3a312b"/>
+              <!-- art -->
+              <polygon points="240,120 300,105 300,140 240,155" fill="#d9c5a8"/>
+              <polygon points="248,124 292,113 292,135 248,146" fill="#b8623f" opacity=".7"/>
+            </svg>
+
+            <span class="tag t1">✓ Windows kept</span>
+            <span class="tag t2">Seating for 6</span>
+            <span class="tag t3">Style · Warm minimal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip wrap reveal">
+    Built with independent designers and small studios in
+    <div class="row"><span>Copenhagen</span><span>Lisbon</span><span>Melbourne</span><span>Brooklyn</span><span>Amsterdam</span></div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">How it works</p>
+        <h2 style="margin-top:12px">From a photo on your phone to a concept you can walk through.</h2>
+        <p class="muted">No modelling. No menus with two hundred icons. Just the room, your idea, and a few minutes.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="num">01</div>
+          <h3>Bring what you have</h3>
+          <p>A floor plan, a photo of the room, a Pinterest board, a napkin sketch. Forma reads walls, windows and doors automatically.</p>
+          <div class="art">
+            <svg viewBox="0 0 220 100" width="220" height="100">
+              <rect x="14" y="18" width="56" height="64" rx="6" fill="#fbf8f3" stroke="#e2d8cb"/>
+              <path d="M24 30h36M24 40h20M24 52h36v20H24z" fill="none" stroke="#8f857b" stroke-width="1.5"/>
+              <rect x="82" y="18" width="56" height="64" rx="6" fill="#fbf8f3" stroke="#e2d8cb"/>
+              <rect x="90" y="26" width="40" height="30" rx="3" fill="#d9c5a8"/><circle cx="102" cy="38" r="6" fill="#fff"/>
+              <path d="M90 56l12-10 10 8 8-5 10 7v5H90z" fill="#8a9a84"/>
+              <rect x="150" y="18" width="56" height="64" rx="6" fill="#fbf8f3" stroke="#e2d8cb"/>
+              <path d="M160 70c10-30 20-20 28-40 4 14 10 22 14 36" fill="none" stroke="#b8623f" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="num">02</div>
+          <h3>Say what you want</h3>
+          <p>Talk to it the way you'd brief a junior: "warmer", "more seating", "keep the fireplace". Every change is editable, nothing is locked in.</p>
+          <div class="art">
+            <svg viewBox="0 0 220 100" width="220" height="100">
+              <rect x="20" y="22" width="150" height="26" rx="13" fill="#fbf8f3" stroke="#e2d8cb"/>
+              <text x="34" y="39" font-family="Fraunces, serif" font-size="12" fill="#221d19">warm minimal, seats six…</text>
+              <rect x="52" y="56" width="156" height="26" rx="13" fill="#221d19"/>
+              <text x="66" y="73" font-family="Inter, sans-serif" font-size="11" fill="#fbf8f3">Done — 2 layouts ready</text>
+            </svg>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="num">03</div>
+          <h3>Explore and share</h3>
+          <p>Flip between layouts, swap materials, walk the 3D concept. Send a link to your client before you've spent a day in a drawing tool.</p>
+          <div class="art">
+            <svg viewBox="0 0 220 100" width="220" height="100">
+              <g transform="translate(20,20)">
+                <polygon points="0,20 60,0 120,20 60,40" fill="#c9ab86"/>
+                <polygon points="0,20 60,40 60,70 0,50" fill="#e8dccd"/>
+                <polygon points="60,40 120,20 120,50 60,70" fill="#d8ccbb"/>
+                <polygon points="30,26 60,16 80,22 50,32" fill="#f4ede2"/>
+              </g>
+              <rect x="150" y="30" width="54" height="40" rx="8" fill="#fbf8f3" stroke="#e2d8cb"/>
+              <circle cx="163" cy="44" r="6" fill="#d9c5a8"/><circle cx="177" cy="44" r="6" fill="#8a9a84"/><circle cx="191" cy="44" r="6" fill="#b8623f"/>
+              <rect x="158" y="56" width="38" height="6" rx="3" fill="#221d19"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="benefits" style="padding-top:0">
+    <div class="wrap">
+      <div class="benefits-wrap reveal">
+        <p class="eyebrow">Why designers love it</p>
+        <h2 style="margin-top:12px;max-width:620px">Less time in software. More time designing.</h2>
+        <div class="benefits">
+          <div class="benefit">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f6f1ea" stroke-width="1.6"><path d="M3 3h14v14H3z"/><path d="M3 10h7V3M10 10v7"/></svg></div>
+            <h3>Floor plan → editable 3D space</h3>
+            <p>Drop in any plan and get a proportioned 3D model in seconds — walls, openings and ceiling heights included.</p>
+          </div>
+          <div class="benefit">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f6f1ea" stroke-width="1.6"><path d="M4 6h12M4 10h12M4 14h12"/><path d="M14 4l2 2-2 2"/></svg></div>
+            <h3>Try layouts instantly</h3>
+            <p>Ask for three seating arrangements and compare them side by side. Move one sofa and everything else updates.</p>
+          </div>
+          <div class="benefit">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f6f1ea" stroke-width="1.6"><circle cx="10" cy="10" r="7"/><circle cx="7.5" cy="8" r="1"/><circle cx="12" cy="7" r="1"/><circle cx="13" cy="11.5" r="1"/></svg></div>
+            <h3>Explore styles and materials</h3>
+            <p>Warm minimal, Japandi, coastal, mid-century. Swap oak for walnut, linen for bouclé, and see it in the actual room.</p>
+          </div>
+          <div class="benefit">
+            <div class="ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#f6f1ea" stroke-width="1.6"><path d="M3 15l4-5 3 3 3-4 4 6z"/><path d="M3 4h14"/></svg></div>
+            <h3>Show clients concepts earlier</h3>
+            <p>Share a link on day one instead of week three. Fewer surprises at the reveal, faster sign-off, happier clients.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STYLE EXPLORER -->
+  <section id="styles" style="padding-top:0">
+    <div class="wrap explorer">
+      <div class="reveal">
+        <p class="eyebrow">Explore styles</p>
+        <h2 style="margin-top:12px">Same room. Five moods. One click each.</h2>
+        <p class="muted" style="margin-top:14px;font-size:17px">Pick a direction and Forma restyles the whole space — palette, materials, furniture language — while keeping your layout intact.</p>
+        <div class="styles" id="styleButtons">
+          <button class="style-btn on" data-style="warm">Warm minimal</button>
+          <button class="style-btn" data-style="japandi">Japandi</button>
+          <button class="style-btn" data-style="coastal">Coastal</button>
+          <button class="style-btn" data-style="midcentury">Mid-century</button>
+          <button class="style-btn" data-style="moody">Moody</button>
+        </div>
+      </div>
+      <div class="board reveal">
+        <div class="board-top"><h3 id="styleName">Warm minimal</h3><span>Material board · auto-generated</span></div>
+        <div class="swatches" id="swatches">
+          <div class="swatch"><small>wall</small></div>
+          <div class="swatch"><small>floor</small></div>
+          <div class="swatch"><small>sofa</small></div>
+          <div class="swatch"><small>textile</small></div>
+          <div class="swatch"><small>accent</small></div>
+        </div>
+        <div class="board-room" id="boardRoom">
+          <img class="on" data-style="warm" src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=1200&q=75&auto=format&fit=crop" alt="Warm minimal living room with cream linen sofa and rattan accents">
+          <img data-style="japandi" src="https://images.unsplash.com/photo-1585128792020-803d29415281?w=1200&q=75&auto=format&fit=crop" alt="Japandi living room with walnut sideboard and grey armchair" loading="lazy">
+          <img data-style="coastal" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200&q=75&auto=format&fit=crop" alt="Bright coastal living room with white walls and blue sofa" loading="lazy">
+          <img data-style="midcentury" src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1200&q=75&auto=format&fit=crop" alt="Mid-century living room with leather armchair, timber and plants" loading="lazy">
+          <img data-style="moody" src="https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?w=1200&q=75&auto=format&fit=crop" alt="Moody living room with deep green walls and dark furniture" loading="lazy">
+          <span class="label" id="roomLabel">Concept · Warm minimal</span>
+        </div>
+        <p class="board-desc" id="styleDesc">Soft plaster walls, pale oak floors, linen seating and a single terracotta accent. Calm, tactile, lived-in.</p>
+        <p class="board-credit">Reference photos via Unsplash · replaced with your own renders in the app</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section style="padding-top:0">
+    <figure class="quote wrap reveal">
+      <blockquote>"I used to lose the client's excitement somewhere between the moodboard and the first render. Now I show them a space in the same meeting."</blockquote>
+      <figcaption>Interior designer, residential studio · beta user</figcaption>
+    </figure>
+  </section>
+
+  <!-- CTA -->
+  <section id="waitlist" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta reveal">
+        <p class="eyebrow">Early access</p>
+        <h2 style="margin-top:12px">Design your next room in Forma.</h2>
+        <p class="muted">We're onboarding a small group of interior designers each week. Tell us where to send your invite.</p>
+        <form class="waitlist" id="waitlistForm" novalidate>
+          <input type="email" id="email" name="email" placeholder="you@studio.com" autocomplete="email" required>
+          <button class="btn btn-primary" type="submit" data-cta="waitlist_submit">Request an invite</button>
+        </form>
+        <p class="form-msg" id="formMsg" aria-live="polite"></p>
+        <p class="cta-sub">Free during beta. No credit card. We'll never share your email.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Forma. Made for people who make rooms.</span>
+    <span><a href="#top">Top</a> · <a href="mailto:hello@forma.design">hello@forma.design</a></span>
+  </div>
+</footer>
+
+<script>
+  // ---------- analytics helper ----------
+  function track(event, props) {
+    try { if (window.posthog) posthog.capture(event, props || {}); } catch (e) {}
+  }
+
+  // CTA clicks
+  document.querySelectorAll('[data-cta]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      track('cta_clicked', { cta: el.dataset.cta, text: el.textContent.trim() });
+    });
+  });
+
+  // ---------- prompt demo ----------
+  var promptText = document.getElementById('promptText');
+  var generateBtn = document.getElementById('generateBtn');
+  var tabs = document.querySelectorAll('.tabs button');
+  var viewPlan = document.getElementById('viewPlan');
+  var view3d = document.getElementById('view3d');
+
+  function showView(v) {
+    tabs.forEach(function (b) { b.classList.toggle('on', b.dataset.view === v); });
+    viewPlan.classList.toggle('hidden', v !== 'plan');
+    view3d.classList.toggle('hidden', v !== '3d');
+  }
+  tabs.forEach(function (b) {
+    b.addEventListener('click', function () {
+      showView(b.dataset.view);
+      track('hero_view_toggled', { view: b.dataset.view });
+    });
+  });
+
+  document.querySelectorAll('.chip').forEach(function (c) {
+    c.addEventListener('click', function () {
+      promptText.value = c.dataset.prompt;
+      fitPrompt();
+      promptText.focus();
+      track('example_prompt_selected', { prompt: c.dataset.prompt, label: c.textContent.trim() });
+    });
+  });
+
+  generateBtn.addEventListener('click', function () {
+    var original = generateBtn.textContent;
+    generateBtn.textContent = 'Generating…';
+    generateBtn.disabled = true;
+    track('example_prompt_submitted', { prompt: promptText.value, prompt_length: promptText.value.length });
+    setTimeout(function () {
+      showView('3d');
+      generateBtn.textContent = original;
+      generateBtn.disabled = false;
+      document.querySelector('.visual').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 900);
+  });
+  promptText.addEventListener('focus', function () { track('example_prompt_focused'); }, { once: true });
+  function fitPrompt() { promptText.style.height = 'auto'; promptText.style.height = promptText.scrollHeight + 'px'; }
+  promptText.addEventListener('input', fitPrompt);
+  window.addEventListener('resize', fitPrompt);
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(fitPrompt); }
+  fitPrompt();
+
+  // ---------- style explorer ----------
+  var STYLES = {
+    warm:       { name: 'Warm minimal', sw: ['#efe7dc','#c9ab86','#e6dccd','#c5806a','#b8623f'], room: { wall:'#efe7dc', floor:'#c9ab86', sofa:'#e6dccd', rug:'#c5806a', accent:'#b8623f' }, desc: 'Soft plaster walls, pale oak floors, linen seating and a single terracotta accent. Calm, tactile, lived-in.' },
+    japandi:    { name: 'Japandi', sw: ['#f3efe6','#a88c6b','#d9d2c5','#8f8a7e','#2f2a26'], room: { wall:'#f3efe6', floor:'#a88c6b', sofa:'#d9d2c5', rug:'#8f8a7e', accent:'#2f2a26' }, desc: 'Low profiles, natural ash and black-stained oak, stone greys and a lot of negative space. Quiet by design.' },
+    coastal:    { name: 'Coastal', sw: ['#f7f5ef','#d8cdb8','#f1ede4','#9fb7c2','#5c7f8f'], room: { wall:'#f7f5ef', floor:'#d8cdb8', sofa:'#f1ede4', rug:'#9fb7c2', accent:'#5c7f8f' }, desc: 'Whitewashed walls, bleached timber, slipcovered seating and sea-glass blues. Light, breezy, unfussy.' },
+    midcentury: { name: 'Mid-century', sw: ['#eee4d2','#8a5a3c','#c98a3d','#5f6b4a','#2c5a5a'], room: { wall:'#eee4d2', floor:'#8a5a3c', sofa:'#c98a3d', rug:'#5f6b4a', accent:'#2c5a5a' }, desc: 'Walnut, mustard, olive and teal. Tapered legs, low credenzas, a bit of swagger. Confident and warm.' },
+    moody:      { name: 'Moody', sw: ['#3b3a3e','#5a4535','#6a5a52','#8b3a3a','#c4a46a'], room: { wall:'#3b3a3e', floor:'#5a4535', sofa:'#6a5a52', rug:'#8b3a3a', accent:'#c4a46a' }, desc: 'Deep charcoal walls, smoked oak, oxblood and velvet, warm brass. Intimate, dramatic, evening-first.' }
+  };
+  var swatchEls = document.querySelectorAll('#swatches .swatch');
+  var roomImgs = document.querySelectorAll('#boardRoom img');
+  function applyStyle(key) {
+    var s = STYLES[key]; if (!s) return;
+    document.getElementById('styleName').textContent = s.name;
+    document.getElementById('styleDesc').textContent = s.desc;
+    document.getElementById('roomLabel').textContent = 'Concept · ' + s.name;
+    swatchEls.forEach(function (el, i) { el.style.background = s.sw[i]; });
+    roomImgs.forEach(function (img) { img.classList.toggle('on', img.dataset.style === key); });
+    document.querySelectorAll('.style-btn').forEach(function (b) { b.classList.toggle('on', b.dataset.style === key); });
+  }
+  applyStyle('warm');
+  window.addEventListener('load', function () { roomImgs.forEach(function (img) { if (img.loading === 'lazy') { img.loading = 'eager'; } }); });
+  document.getElementById('styleButtons').addEventListener('click', function (e) {
+    var b = e.target.closest('.style-btn'); if (!b) return;
+    applyStyle(b.dataset.style);
+    track('style_selected', { style: b.dataset.style });
+  });
+
+  // ---------- waitlist ----------
+  var form = document.getElementById('waitlistForm');
+  var emailInput = document.getElementById('email');
+  var formMsg = document.getElementById('formMsg');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = emailInput.value.trim();
+    var valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!valid) {
+      formMsg.style.color = '#b8623f';
+      formMsg.textContent = 'Please enter a valid email address.';
+      track('waitlist_invalid_email');
+      return;
+    }
+    try {
+      if (window.posthog) {
+        posthog.identify(email, { email: email, persona: 'interior_designer', source: 'forma_landing' });
+        posthog.capture('waitlist_joined', { email: email, persona: 'interior_designer' });
+      }
+    } catch (err) {}
+    form.querySelector('button').disabled = true;
+    emailInput.disabled = true;
+    formMsg.style.color = '#8a9a84';
+    formMsg.textContent = "You're on the list. We'll be in touch soon — go find a room worth redesigning.";
+  });
+
+  // ---------- reveal on scroll ----------
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  setTimeout(function () { document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); }); }, 2500);
+
+  // ---------- scroll depth ----------
+  var marks = [25, 50, 75, 100], hit = {};
+  window.addEventListener('scroll', function () {
+    var d = Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100);
+    marks.forEach(function (m) { if (d >= m && !hit[m]) { hit[m] = true; track('scroll_depth', { percent: m }); } });
+  }, { passive: true });
+</script>
+</body>
+</html>
